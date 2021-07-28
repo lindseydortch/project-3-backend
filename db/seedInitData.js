@@ -1,18 +1,24 @@
 // import seedData
-const eventsData = require('./event-seeds.json')
-
-//import models 
-const Events = require("../models/event-model")
-
+const eventsData = require("./event-seeds.json");
+const userData = require("./user-seeds.json");
+//import models
+const Events = require("../models/event-model");
+const User = require("../models/user-model");
 // remove any preexisting data and insert
 Events.deleteMany({})
-.then( () => {
-return Events.insertMany(eventsData)
-})
-.then(console.log)
-.catch(console.error)
+  .then(() => {
+    return Events.insertMany(eventsData);
+  })
+  .then(console.log)
+  .catch(console.error);
+User.deleteMany({})
+  .then(() => {
+    return User.insertMany(userData);
+  })
+  .then(console.log)
+  .catch(console.error)
 
-// exit 
-.finally( () => {
-    process.exit()
-})
+  // exit
+  .finally(() => {
+    process.exit();
+  });
