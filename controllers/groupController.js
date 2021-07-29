@@ -25,6 +25,7 @@ router.put('/group', (req, res) => {
   let id = req.body._id
   let message = req.body.message
   let likes = req.body.likes
+  console.log(req.body)
   Group.findOneAndUpdate(
     {_id: id},
     {
