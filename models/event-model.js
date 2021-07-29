@@ -1,18 +1,29 @@
-const mongoose = require("../db/connection");
+const mongoose = require('../db/connection')
 
-const EventSchema = new mongoose.Schema({
-  title: String,
-  user: String,
-  type: String,
-  location: String,
-  date: String,
-  online: {type: Boolean, default: false},
-  inPerson: {type: Boolean, default: false},
-  cost: Number,
-  socialComfortScale: Number,
-  details: String,
-  attendees:Array
-});
+const EventSchema = mongoose.Schema({
+    name: String,
+    user: String,
+    // user: {
+    //     // References use the type ObjectId
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     // the name of the model to which they refer
+    //     ref: 'User'
+    //   },
+    type: String,
+    location: String,
+    dateAndTime: String,
+    online: String,
+    inPerson: String,
+    socialComfortScale: String,
+    description: String,
+    attending: String,
 
-const Event = mongoose.model("Event", EventSchema);
-module.exports = Event;
+})
+
+
+///url?
+///img?
+
+
+const Event = mongoose.model('Event', EventSchema)
+module.exports = Event

@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 // Import Controllers
 const controller = require('./controllers/HomeController')
-const EventsController = require('./controllers/EventController')
+const EventController = require('./controllers/EventController')
 
 
 // Middleware 
@@ -15,7 +15,7 @@ app.use(cors())
 
 // Use routes through controller 
 app.use(controller)
-app.use(EventsController)
+app.use('/events', EventController)
 // ===============================================
 // Listen Port
 // ===============================================
