@@ -1,7 +1,7 @@
 const mongoose = require('../db/connection')
 
 const EventSchema = mongoose.Schema({
-    name: String,
+    title: String,
     user: String,
     // user: {
     //     // References use the type ObjectId
@@ -11,19 +11,14 @@ const EventSchema = mongoose.Schema({
     //   },
     type: String,
     location: String,
-    dateAndTime: String,
+    date: String,
     online: String,
     inPerson: String,
-    socialComfortScale: String,
-    description: String,
-    attending: String,
+    socialComfortScale: Number,
+    details: String,
+    attendees: Array,
 
 })
-
-
-///url?
-///img?
-
 
 const Event = mongoose.model('Event', EventSchema)
 module.exports = Event

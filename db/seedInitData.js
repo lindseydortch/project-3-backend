@@ -11,6 +11,7 @@ Events.deleteMany({})
   })
   .then(console.log)
   .catch(console.error);
+
 User.deleteMany({})
   .then(() => {
     return User.insertMany(userData);
