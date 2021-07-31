@@ -1,7 +1,7 @@
 const mongoose = require('../db/connection')
 
 const EventSchema = mongoose.Schema({
-    title: String,
+    name: String,
     user: String,
     // user: {
     //     // References use the type ObjectId
@@ -14,6 +14,7 @@ const EventSchema = mongoose.Schema({
     date: String,
     online: String,
     inPerson: String,
+    cost:Number,
     socialComfortScale: Number,
     details: String,
     attendees: Array,
