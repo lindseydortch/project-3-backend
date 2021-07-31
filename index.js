@@ -10,16 +10,18 @@ app.use(cors())
 
 // Bring in Controller 
 const controller = require('./controllers/controller')
+const EventController = require('./controllers/EventController')
 const groupController = require('./controllers/groupController')
-app.use(groupController)
 app.use(controller)
+app.use(EventController)
+app.use(groupController)
+
+// Use routes through controller 
 
 // ===============================================
-// Listen
+// Listen Port
 // ===============================================
-// Port Variable 
-const port = process.env.PORT || 8000
-
-app.listen(port, () => {
-  console.log(`Your app is running on port ${port}`)
-})
+app.set("port", process.env.PORT || 4000);
+app.listen(app.get("port"), () =>
+console.log(`get porty on ${app.get("port")}`)
+);
