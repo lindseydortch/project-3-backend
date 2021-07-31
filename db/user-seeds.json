@@ -1,0 +1,39 @@
+[
+    {
+        "firstname": "Lindsey",
+        "lastname": "Dortch",
+        "city": "Dallas",
+        "state": "Texas",
+        "username": "MrsLeftyDortch231",
+        "email": "Lindsey@dortch.io",
+        "password": "MrsLefty4lyfe"
+    }, 
+    {
+        "firstname": "Kirsten",
+        "lastname": "Lueder",
+        "city": "Orlando",
+        "state": "Florida",
+        "username": "ChaseMeRyan",
+        "email": "kirsten@lueder.io",
+        "password": "happy4ryan"
+    }, 
+    {
+        "firstname": "Chloe",
+        "lastname": "Palmer",
+        "city": "Kansas City",
+        "state": "Missouri",
+        "username": "2legit2Quit",
+        "email": "chloe@palmer.io",
+        "password": "rickroll"
+    }, 
+    {
+        "firstname": "Asif",
+        "lastname": "Kamal",
+        "city": "Chicago",
+        "state": "Illinois",
+        "username": "MayorOfNorthHalsted",
+        "email": "asif@kamal.io",
+        "password": "TomDaleeyBoyyy"
+    }
+
+]
