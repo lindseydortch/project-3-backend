@@ -15,7 +15,7 @@ app.use(cors())
 
 // Use routes through controller 
 app.use(controller)
-app.use('/events', EventController)
+app.use(EventController)
 // ===============================================
 // Listen Port
 // ===============================================
