@@ -9,10 +9,10 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 // Bring in Controller 
-const controller = require('./controllers/controller')
+const HomeController = require('./controllers/HomeController')
 const EventController = require('./controllers/EventController')
 const groupController = require('./controllers/groupController')
-app.use(controller)
+app.use(HomeController)
 app.use(EventController)
 app.use(groupController)
 
