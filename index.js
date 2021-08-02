@@ -1,5 +1,7 @@
 // Initializing Express 
 const express = require('express')
+// Adding dotenv for the jwt secrete key to work
+require("dotenv").config()
 const app = express()
 const cors = require('cors')
 
