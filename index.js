@@ -12,9 +12,11 @@ app.use(cors())
 const HomeController = require('./controllers/HomeController')
 const EventController = require('./controllers/EventController')
 const groupController = require('./controllers/groupController')
+const userController = require('./controllers/usersController')
 app.use(HomeController)
 app.use(EventController)
 app.use(groupController)
+app.use(userController)
 
 // Use routes through controller 
 
