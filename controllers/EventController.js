@@ -18,11 +18,10 @@ router.get('/events', (req, res, next) => {
      .then(data => res.json(data))
     .catch(next)
   })
-  router.get('/event/:id', (req, res, next) => {
+  router.get('/event/:id', (req, res) => {
     Event.findById(req.params.id)
     .then(event => res.json(event))
-    .catch(next)
-  })
+    })
   router.put('/event/edit/:id', (req, res, next) => {
     Event.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true})
     //.populate('user')

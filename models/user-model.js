@@ -1,25 +1,22 @@
 const mongoose = require("../db/connection");
 
 const UserSchema = new mongoose.Schema({
-  firstname: String,
-  lastname: String,
+  userName: {
+    type: String,
+    required: true,
+    unique: true,
+    maxlength: 15,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
   city: String,
   state: String,
-  username: String,
-  email: String,
-  password: String,
-  // groups: [{
-  //   // References use the type ObjectId
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   // the name of the model to which they refer
-  //   ref: 'Group'
-  // }],
-  // events: [{
-  //   // References use the type ObjectId
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   // the name of the model to which they refer
-  //   ref: 'Event'
-  // }]
+  date: {
+    type: Date,
+    default: Date.now
+}
 });
 
 const User = mongoose.model("User", UserSchema);

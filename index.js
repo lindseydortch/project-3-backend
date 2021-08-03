@@ -1,5 +1,7 @@
 // Initializing Express 
 const express = require('express')
+// Adding dotenv for the jwt secrete key to work
+require("dotenv").config()
 const app = express()
 const cors = require('cors')
 
@@ -12,9 +14,11 @@ app.use(cors())
 const HomeController = require('./controllers/HomeController')
 const EventController = require('./controllers/EventController')
 const groupController = require('./controllers/groupController')
+const userController = require('./controllers/usersController')
 app.use(HomeController)
 app.use(EventController)
 app.use(groupController)
+app.use(userController)
 
 // Use routes through controller 
 
