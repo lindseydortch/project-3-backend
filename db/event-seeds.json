@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Harry Potter Pictionary!",
+        "type": "Social_Gathering",
+        "city": "Chicago",
+        "state":"IL",
+        "date": "Friday, July 23, 2021",
+        "online": false,
+        "inPerson":true,
+        "cost": 0,
+        "socialComfortScale": 3,
+        "details": "Are you ready to draw? Are you ready to guess? Get your drawing skills ready as you compete with your fellow players to figure out who is the best artist of all things Harry Potter. We will be playing Harry Potter Pictionary, found at www.sketchful.io This is a site that allows us to play pictionary without any extra equipment, so come on in and have some fun! There is no need to be a good artist to play this game, as it is all in good fun and we're a pretty chill group.",
+        "attendees":[]
+    },
+    {
+        "name": "Free Flow Yoga Class ",
+        "type": "Fitness",
+        "city": "Orlando",
+        "state":"FL",
+        "date": "Saturday, July 24, 2021",
+        "online": true,
+        "inPerson":true,
+        "cost": 0,
+        "socialComfortScale": 2,
+        "details": "Need a good stretch? Are you ready to fold into a pretzel? Get your muscles limber and minds ready to spend your hour in the most uncomfortable of positions. We will be playing classical yogi music in the background and provide you with the most exhilarating yoga class to hit Orlando. Mark your calendars you don't want to miss this. ",
+        "attendees":[]
+    },
+    {
+        "name": "Walking Tour: Dark History on Taylor Street",
+        "type": "Hobbies",
+        "city": "Chicago",
+        "state":"IL",
+        "date": "Aug 23, 2021",
+        "online": false,
+        "inPerson":true,
+        "cost": 54,
+        "socialComfortScale": 3,
+        "details": "Discover the secret history of Taylor Street—ghosts, gangsters, arson queens, b-movie greats, devil babies and more! They say that there’s history on every block, but sometimes you come across a stretch of road where the strange stories seem to come up through every crack. One such place is the stretch of Taylor St. between Halsted and Ashland. Known today as Little Italy, the prohibition era mobsters were only one link in a long chain of fascinating stories. On this in-person walking minute tour, author and historian Adam Selzer will tell stories of arsonist queens, public hangings, miser’s curses, devil baby scares, nuns whose bodies turned to stone, and legendary mobsters of the 1920s who made Taylor Street their home.",
+        "attendees":[]
+    },
+    {
+        "name": "Saturday Afternoon Stitch",
+        "type": "Hobbies",
+        "city": "Dallas",
+        "state":"TX",
+        "date": "July 23, 2021",
+        "online": true,
+        "inPerson":false,
+        "cost": 0,
+        "socialComfortScale": 1,
+        "details": "Bring a project! We are not limited to just knitting and crochet. We welcome embroidery and all other fiber crafts. This is a come-and-go event. As we get meetings started back up, please RSVP so we can look for you online. As a reminder to all, kindly refrain from any and all political discussions. This group is intended to be a place for all crafters to come together to have a good time.",
+        "attendees":[]
+    }
+]
