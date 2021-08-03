@@ -2,16 +2,20 @@ const mongoose = require('../db/connection')
 
 const EventSchema = mongoose.Schema({
     name: String,
-    user: String,
-    // user: {
-    //     // References use the type ObjectId
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     // the name of the model to which they refer
-    //     ref: 'User'
-    //   },
+    addedBy:{
+        type:String,
+        default: "WeBackIshAdmin"
+    },
     type: String,
-    location: String,
-    date: String,
+    city: String,
+    state:{
+        type:String,
+        maxlength:2
+    },
+    date: {
+        type: Date,
+        default: Date.now,
+      },
     online: String,
     inPerson: String,
     cost:Number,
