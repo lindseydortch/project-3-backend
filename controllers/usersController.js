@@ -46,14 +46,14 @@ router.post("/register", async (req, res) => {
 
 // Profile routes
 
-router.get("/profile", async (req, res) => {
-  // check req.userName._ID or user._id
-  const user = await User.findById(req.user._id);
+router.get("/profile", auth, async (req, res) => {
+  const user =  User.findById(req.user._id);
   res.json({
     id: user._id,
     userName: user.userName,
     date: user.date,
   });
+  
 });
 
 // delete profile will need auth
@@ -118,6 +118,8 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/tokenIsValid", async (req, res) => {
+  // res.send('tokenValid Post Request sent')
+  
   try {
     const token = req.header("auth-token");
     if (!token) {
