@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+
 // import model
 const User = require("../models/user-model");
 
@@ -47,10 +48,14 @@ router.post("/register", async (req, res) => {
 // Profile routes
 
 router.get("/profile", auth, async (req, res) => {
-  const user =  User.findById(req.user._id);
+  const user = await User.findById(req.user._id);
+  // console.log(req.user._id + " user controller profile get route hit")
   res.json({
     id: user._id,
     userName: user.userName,
+    password: user.password,
+    city: user.city,
+    state: user.state,
     date: user.date,
   });
   
@@ -95,14 +100,7 @@ router.post("/login", async (req, res) => {
     if (!response) {
       return res.status(400).send({ msg: "Authentication Error" });
     } else {
-      const userForToken = {
-        _id: user._id,
-      };
-
-      const token = jwt.sign(userForToken, `${process.env.JWT_SECRET}`);
-
-      // const token = jwt.sign({_id: user._id}, `${process.env.JWT_SECRET}`)
-
+      const token = jwt.sign({_id: user._id}, process.env.JWT_SECRET)
       res.json({
         token: token,
         user: {
@@ -126,7 +124,7 @@ router.post("/tokenIsValid", async (req, res) => {
       return res.json("false");
     }
 
-    const verified = jwt.verify(token, `${process.env.JWT_SECRET}`);
+    const verified = jwt.verify(token, process.env.JWT_SECRET);
     if (!verified) {
       return res.json("false");
     }
