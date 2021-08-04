@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema({
     required: true,
   },
   city: String,
-  state: String,
+  interact: String,
   date: {
     type: Date,
     default: Date.now

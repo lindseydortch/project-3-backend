@@ -35,7 +35,7 @@ router.post("/register", async (req, res) => {
         userName: req.body.userName,
         password: hash,
         city: req.body.city,
-        state: req.body.state,
+        interact: req.body.interact,
       });
       newUser
         .save()
@@ -55,7 +55,7 @@ router.get("/profile", auth, async (req, res) => {
     userName: user.userName,
     password: user.password,
     city: user.city,
-    state: user.state,
+    interact: user.interact,
     date: user.date,
   });
   
@@ -107,7 +107,7 @@ router.post("/login", async (req, res) => {
           id: user._id,
           userName: user.userName,
           city: user.city,
-          state: user.state,
+          interact: user.interact,
           date: user.date,
         },
       });
