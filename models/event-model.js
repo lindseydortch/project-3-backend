@@ -8,18 +8,13 @@ const EventSchema = mongoose.Schema({
     },
     type: String,
     city: String,
-    state:{
-        type:String,
-        maxlength:2
-    },
     date: {
         type: Date,
         default: Date.now,
       },
-    online: String,
-    inPerson: String,
+    interact: String,
+    socialScale: String,
     cost:Number,
-    socialComfortScale: Number,
     details: String,
     attendees: Array,
 
